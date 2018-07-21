@@ -1,0 +1,44 @@
+# Profile load time using the unix command zprof after startup
+# zmodload zsh/zprof
+
+# Path to your oh-my-zsh installation
+export ZSH="/Users/johannes/.oh-my-zsh"
+
+# Add path for my custom commands (eg. tat)
+export PATH="$HOME/bin:$PATH"
+
+
+# Lazy load nvm to massively reduce zsh startup time
+export NVM_NO_USE=true
+export NVM_LAZY_LOAD=true
+
+# Add plugins wisely, as too many of them slow down shell startup.
+plugins=(
+  git
+  zsh-nvm
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
+# Use OH MY ZSH
+source $ZSH/oh-my-zsh.sh
+
+# Use the pure shell
+ZSH_THEME=""
+autoload -U promptinit; promptinit
+prompt pure
+
+# Set your language environment
+export LANG=de_DE.UTF-8
+
+# Preferred editor for local and remote sessions
+export EDITOR='vim'
+
+# More settings
+for zsh_source in $HOME/dotfiles/zsh/configs/*.zsh; do
+  source $zsh_source
+done
+
+ensure_tmux_is_running
+
+
