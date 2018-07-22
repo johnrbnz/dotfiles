@@ -7,6 +7,10 @@ export ZSH="/Users/johannes/.oh-my-zsh"
 # Add path for my custom commands (eg. tat)
 export PATH="$HOME/bin:$PATH"
 
+# Navigate folders more easily with CDPATH
+setopt auto_cd
+cdpath=($HOME/Documents $HOME/Documents/1\ studio)
+
 
 # Lazy load nvm to massively reduce zsh startup time
 export NVM_NO_USE=true
