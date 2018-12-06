@@ -1,0 +1,34 @@
+- .DS_Store
+- .DocumentRevisions-V100
+- .Spotlight-V100
+- .TemporaryItems
+- .Trashes
+- .VolumeIcon.icns
+- .apdisk
+- .com.apple.timemachine.donotpresent
+- .disk_label
+- .disk_label_2x
+- .fseventsd
++ 1 design
++ 2 praxis
++ BACKUP MacBook alt
++ BACKUP MacBook neu
++ BACKUP System
+- Backups.backupdb
++ Fotos Liesi Dropbox.zip
++ Laptop Daten 13_02_10
++ Mozarteum
++ Mozarteum Computer
++ N95 8GB Fotos
++ N95 Datenkopie
+- Neuseeland Australien 2016_2017
++ Riven Phoenix
++ Software
++ Studium
++ The Pragmatic Studio
++ TheVolumeSettingsFolder
++ Universität Mozarteum
++ Videos
++ ZIPped
++ lynda.com
++ runtastic
