@@ -1,5 +1,5 @@
 # Profile load time using the unix command zprof after startup
-# zmodload zsh/zprof
+zmodload zsh/zprof
 
 # Path to your oh-my-zsh installation
 export ZSH="/Users/johannes/.oh-my-zsh"
@@ -9,12 +9,17 @@ export PATH="$HOME/bin:$PATH"
 
 # Navigate folders more easily with CDPATH
 setopt auto_cd
-cdpath=($HOME/Documents $HOME/Documents/1\ studio)
-
+export CDPATH="$PATH:/Users/johannes/Code:/Users/johannes/Sites"
 
 # Lazy load nvm to massively reduce zsh startup time
 export NVM_NO_USE=true
 export NVM_LAZY_LOAD=true
+
+# Lazy load rbenv
+rbenv() {
+  eval "$(command rbenv init -)"
+  rbenv "$@"
+}
 
 # Add plugins wisely, as too many of them slow down shell startup.
 plugins=(
@@ -26,6 +31,9 @@ plugins=(
 
 # Use OH MY ZSH
 source $ZSH/oh-my-zsh.sh
+
+# Reduce startup time by disabling oh-my-zsh's update prompting
+DISABLE_UPDATE_PROMPT=true
 
 # Use the pure shell
 ZSH_THEME=""
@@ -44,5 +52,4 @@ for zsh_source in $HOME/dotfiles/zsh/configs/*.zsh; do
 done
 
 ensure_tmux_is_running
-
 
