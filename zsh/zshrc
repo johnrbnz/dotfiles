@@ -5,11 +5,14 @@ zmodload zsh/zprof
 export ZSH="/Users/johannes/.oh-my-zsh"
 
 # Add path for my custom commands (eg. tat)
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:$PATH"
+
+# Add path for composer
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Navigate folders more easily with CDPATH
 setopt auto_cd
-export CDPATH="$PATH:/Users/johannes/Code:/Users/johannes/Sites"
+export CDPATH="$PATH:/Users/johannes/Code:/Users/johannes/Sites:/Users/johannes/Documents:/Users/johannes/Documents/08_FH:/Users/johannes/Documents/01_studio"
 
 # Lazy load nvm to massively reduce zsh startup time
 export NVM_NO_USE=true

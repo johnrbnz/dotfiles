@@ -28,6 +28,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'elixir-editors/vim-elixir'      " Elixir support for vim
 Plug 'isRuslan/vim-es6'               " ES6 syntax highlighting
 Plug 'evidens/vim-twig'               " Twig syntax highlighting
+Plug 'stevearc/vim-arduino'           " Add Arduino support (depends on arduino command)
+Plug 'stephpy/vim-php-cs-fixer'       " Add wrapper around php-cs-fixer
 
 call plug#end()
 
@@ -158,3 +160,10 @@ function! CSScomb()
   execute "silent !csscomb " . expand('%')
   redraw!
 endfunction
+
+" Arduino
+let g:arduino_verify_tmux = ''
+let g:arduino_upload_tmux = ''
+nnoremap <Leader>av :ArduinoVerify<cr>
+nnoremap <Leader>au :ArduinoUpload<cr>
+
